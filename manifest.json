@@ -8,13 +8,10 @@
   "author": "Authorship: Thiago Rodrigues and Luis Bajaña",
   "offline_enabled": false,
   "icons": {
-    "16": "images/icons/small.png",
-    "48": "images/icons/48x48.png",
-    "128": "images/icons/naviologo.png",
-    "144": "images/icons/144x144.png"
+    "128": "images/icons/icon128.png"
     },
    "browser_action": {
-    "default_icon": "images/icons/authorship.png",
+    "default_icon": "images/icons/icon128.png",
     "default_popup": "tags.html"
   },
   "permissions": [
