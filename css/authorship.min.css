@@ -1,0 +1,116 @@
+
+body {
+    background-color: white;
+    font-family: 'Quicksand', sans-serif;    
+    height: 310px;
+    width: 410px;
+}
+
+a {
+    color: #1AA7B5;
+    text-decoration: none;
+}
+
+header > img {
+  width: 40%;
+  float: left;
+}
+
+.explanation {
+  color: #C5CDCB;
+  font-size: 0.9em;
+  background-color: #F5F5F5;
+  border-radius: 6px;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+#get-tags {
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: #1AA7B5;
+    color: white;
+    float: right;
+   outline:none;
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    width: 80%;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.tags-container {
+    padding: 1em;
+    position: relative;
+    top: 29px;
+    overflow: scroll;
+    width: 100%;
+    margin-bottom: 55px;
+}
+
+.tag {
+    float: left;
+    font-size: 10px;
+    position: relative;
+    height: 40px;
+    margin-right: 0.4em;
+}
+.tag a {
+    margin: 3px;
+    padding: 5px;
+    color: #666;
+    background-color: #EDEBEB;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+}
+
+.tag:hover .delete-tag {
+    display: block;
+}
+
+.delete-tag {
+    position: absolute;
+    margin: 0px !important;
+    padding: 0px !important;
+    top: -15px;
+    right: 0px;
+}
+.delete-tag i {
+    color: #D8454A;
+    font-size: 16px;
+}
+.sharing {
+    display: table;
+    width: 80%;
+    position:fixed;
+    bottom: 25px;
+    
+}
+.sharing-el {
+    display: table-cell;
+    width: 33%;
+}
+
+.sharing-el i {
+    font-size: 30px;
+}
+
+#number-of-tags {
+    font-size: 1.2em;
+}
+
+#tags {
+    color: white;
+    border: none;
+}

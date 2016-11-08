@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src ="js/clipboard.min.js" ></script>
+    <script src ="js/jquery-3.0.0.min.js" ></script>
+    <script src ="js/main.js" ></script>
+    <script src ="js/tagsApi.js" ></script>    
+    <link rel="stylesheet" type="text/css" href="css/authorship.min.css">  
+    <link rel="stylesheet" type="text/css" href="css/input-file.css">  
+    <link rel="stylesheet" type="text/css" href="css/jquery.highlighttextarea.css">
+    <link rel="stylesheet" type="text/css" href="css/simplebar.css">
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">    
+  </head>
+  
+  <body>  
+    <header>
+      <img src="images/Authorship-tags.png" alt="Authorship tags logo">
+     <button id="get-tags">GET TAGS</button>
+    </header>
+    
+    <input type="text" id="tags">
+    
+    <main>
+      <span id="number-of-tags"></span>
+      <div class="center tags-container" data-simplebar-direction="vertical">
+        <p class="explanation">Press "GET TAGS" to analyze your document</p>
+        <div id="loading" class="hide"><img src="images/authorship_loading.gif" alt="loading tags"> </div>
+    </div>
+    <div class="sharing">
+      <div class="sharing-el">
+        <a class="copy" href="#" data-clipboard-target="input">
+          <i class="fa fa-clone" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="sharing-el">
+        <a href="#" class="csv">
+          <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="sharing-el">
+        <a href="#" class="email">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </a>
+      </div>
+   </main>    
+  </body>
+</html>  
+
