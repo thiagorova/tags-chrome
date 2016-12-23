@@ -1,21 +1,20 @@
 {
-  "name": "Authorship-tags",
+  "name": "Tags by Authorship",
   "short_name": "Tags",  
-  "description": "Tag generating extension.",
-  "version": "1.0",
+  "description": "We collect metadata from your text, giving you its tags.",
+  "version": "1.3",
   "manifest_version": 2,
-  "description": "This extension gets tags from your text fields!",
   "author": "Authorship: Thiago Rodrigues and Luis Bajaña",
   "offline_enabled": false,
   "icons": {
-    "128": "images/icons/icon128.png"
+    "128": "images/icons/icon.png"
     },
    "browser_action": {
-    "default_icon": "images/icons/icon128.png",
+    "default_icon": "images/icons/icon.png",
     "default_popup": "tags.html"
   },
   "permissions": [
-    "activeTab", "tabs"
+    "activeTab", "tabs", "storage"
   ],
     "content_scripts": [
     {
