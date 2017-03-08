@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xml>
+  <en>
+    <get-tags>GET TAGS</get-tags>
+    <explanation>Press "GET TAGS" to analyze your document</explanation>
+    <footer-start-text>© Copyright </footer-start-text>
+    <authorship-name>Authorship.me</authorship-name> 
+    <footer-end-text>Todos os direitos reservados.</footer-end-text>
+  </en>
+   <de>
+     <get-tags>NIMM TAGS</get-tags>
+     <explanation>Drück auf "NIMM TAGS", um Ihr Dokument zu analysieren</explanation>
+    <footer-end-text>Alle Rechte vorbehalten.</footer-end-text>
+   </de>
+   <pt>
+     <get-tags>OBTER TAGS</get-tags>
+     <explanation>Clique em "OBTER TAGS"para analisar o seu documento</explanation>
+    <footer-end-text>Todos os direitos reservados.</footer-end-text>
+   </pt>
+</xml>
