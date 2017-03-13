@@ -16,11 +16,11 @@ var Tags = function (key) {
     this.priv.userAdd = baseAdd + "/users/";
     this.priv.newText = true;		//marks whether the tags from the text have been already generated
   };
-  
+
     //this is just a shorthand
    Tags.prototype.hidden = {};
    var hid = Tags.prototype.hidden;
-   
+
 //public methods
     Tags.prototype.setText = function (text) {
       if (this.text !== text) this.priv.newText = true;
@@ -29,21 +29,21 @@ var Tags = function (key) {
 
     Tags.prototype.getTags = function(excludeIrrelevant, callback, callbackError) {
       if (typeof callback === 'undefined') { callback = null; }
-      if (typeof callbackError === 'undefined') { callbackError = null; }      
+      if (typeof callbackError === 'undefined') { callbackError = null; }
       if (this.tags === null || this.priv.newText === true) {
         this.getTagsFull(excludeIrrelevant, function (fullTags) {
           if (callback !== null) callback(this.tags);
-        }, 
+        },
         callbackError);
         this.priv.newText = true;
       } else if (callback !== null) callback(this.tags);
-      
+
     };
 
     Tags.prototype.getTagsFull = function (excludeIrrelevant, callback, callbackError) {
-      if (typeof callback === 'undefined') { callback = null; }      
+      if (typeof callback === 'undefined') { callback = null; }
       if (typeof excludeIrrelevant === 'undefined') { excludeIrrelevant = false; }
-      if (typeof callbackError === 'undefined') { callbackError = null; }      
+      if (typeof callbackError === 'undefined') { callbackError = null; }
       if (this.tags === null || this.priv.newText === true) {
 //the AJAX callback is an anonymous function, and therefore does not belong in the prototype scope. That means that it has no reference to the initial object caller. Hence, "me = this" to keep it
         var me = this;
@@ -65,7 +65,7 @@ var Tags = function (key) {
             me.tagsFull = me.tagsFull.filter(function (tag) { return tag.origin === "custom"}).concat(tagsObj);
           }
           if(callback !== null) callback(tagsObj);
-        }, 
+        },
         callbackError);
       } else if(callback !== null) callback(this.tagsFull);
     };
@@ -79,7 +79,7 @@ var Tags = function (key) {
       });
       return userTagsClean;
     };
-  
+
     Tags.prototype.getSystemTags = function() {
       var systemTags =  this.tagsFull.filter(function(tag) {
           return tag.origin === "system"
@@ -100,9 +100,9 @@ var Tags = function (key) {
       var tagToAdd = hid.getTag(this.tagsFull, tag);
       if (tagToAdd === null) {
         tagToAdd = hid.customTag(tag, type);
-        apiCall("POST", this.priv.address + "create", 
+        apiCall("POST", this.priv.address + "create",
           buildTagJSON(tagToAdd, this.text, this.priv.key),
-          callback, 
+          callback,
           callbackError);
         if(this.tags == null) {
           this.tags = [{"tag": tag}];
@@ -123,7 +123,7 @@ var Tags = function (key) {
         var index = this.tagsFull.indexOf(tagToExclude);
         this.tagsFull.splice(index, 1);
         var index = this.tags.indexOf(tag);
-        this.tags.splice(index, 1);                 
+        this.tags.splice(index, 1);
       }
     };
 
@@ -135,7 +135,7 @@ var Tags = function (key) {
     };
 
     Tags.prototype.updateTag = function (tag, type, callbackError) {
-      if (typeof callbackError === 'undefined') { callbackError = null; }    
+      if (typeof callbackError === 'undefined') { callbackError = null; }
       if (type !== null) {
         var tagToChange = hid.getTag(this.tagsFull, tag);
         if (tagToChange !== null) {
@@ -144,12 +144,12 @@ var Tags = function (key) {
         }
       }
     };
-    
+
     Tags.prototype.getTagTypes = function () {
       var types = {"person": "Person", "measure": "Measure", "artWork": "Work of Art", "organization": "Organization", "fieldterminology": "Field terminology", "location": "Location", "continent": "Continent", "unknown": "Tag type unknown"};
       return types;
     };
-    
+
     Tags.prototype.updateArray = function (data) {
       for (var tag in data) {
         this.updateTag(data[tag].tag, data[tag].type);
@@ -161,9 +161,9 @@ var Tags = function (key) {
         this.addTag(data[tag].tag, data[tag].type);
       }
     };
-    
+
     Tags.prototype.getUser = function (callback, callbackError) {
-      if (typeof callback === 'undefined') { callback = null; }    
+      if (typeof callback === 'undefined') { callback = null; }
       if (typeof callbackError === 'undefined') { callbackError = null; }
         apiCall("GET", this.priv.userAdd + "show", {"apikey": this.priv.key }, function (response) {
           var user = JSON.parse( response );
@@ -208,7 +208,7 @@ var Tags = function (key) {
 //a few helper functions
     var apiCall = function(method, api, data, callbackOK, callbackError) {
       if (typeof callbackOK === 'undefined') { callbackOK = null; }
-      if (typeof callbackError === 'undefined') { callbackError = null; }          
+      if (typeof callbackError === 'undefined') { callbackError = null; }
         var xhttp = createXHTTP( function(response) {
           if (xhttp.readyState == 4) {
             if (xhttp.status == 200) {
@@ -235,7 +235,7 @@ var Tags = function (key) {
             }
           }
           xhttp.open(method, api + "?" + getParams, true);
-          xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");          
+          xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         } else {
           xhttp.open(method, api, true);
           xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -273,4 +273,3 @@ window.Tags = Tags;
 
 
 })( window );
-

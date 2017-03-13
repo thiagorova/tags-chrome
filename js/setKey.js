@@ -4,7 +4,7 @@
     var password = document.getElementById("password").value;
     data = {
       user: {
-        "email": email, 
+        "email": email,
         "password": password
       },
       tool: "tags",
@@ -12,7 +12,7 @@
     }
     testLogin(data);
   }
-  
+
     var createXHTTP = function(callback) {
         var xhttp;
         if (window.XMLHttpRequest) {
@@ -47,5 +47,3 @@ window.onload=function(){
     document.getElementById("login").addEventListener('click', login);
     document.getElementById("password").addEventListener('keypress', login);
 }
-  
-  

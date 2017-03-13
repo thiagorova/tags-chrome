@@ -19,10 +19,10 @@ $(document).ready(function() {
     },1000);
     e.clearSelection();
   });
-  
+
   tagsQuotaReached = false
 });
- 
+
 $(document).on('click','.delete-tag',function(e){
   e.preventDefault();
 
@@ -45,17 +45,17 @@ $(document).on("click", "#get-tags", function(e) {
         if  (response.error === "") {
           tags.setText(response.text);
 //          tags.getTagsFull(true,  function(tagResponse) {		//this eliminates tags with too little relevance, including previously excluded tags...
-          tags.getTagsFull(false,  function(tagResponse) {		
+          tags.getTagsFull(false,  function(tagResponse) {
             $("#loading").addClass("hide");
             setTags(tagResponse);
           }, function (response) {
-            $("#loading").addClass("hide"); 
-            $(".explanation").removeClass("hide"); 
-            $(".explanation").text(response); 
-            $("#get-tags").text("UGRADE TO PREMIUM"); 
+            $("#loading").addClass("hide");
+            $(".explanation").removeClass("hide");
+            $(".explanation").text(response);
+            $("#get-tags").text("UGRADE TO PREMIUM");
             $(".explanation").css("background-color", "#FFDBDB");
              $(".explanation").css("color", "#666");
-             if(response === "Monthly quota reached. Please upgrade to an premium account") {  
+             if(response === "Monthly quota reached. Please upgrade to an premium account") {
                tagsQuotaReached = true;
              }
           });
