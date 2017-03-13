@@ -8,7 +8,7 @@
     <no-account>Don't have an account yet?</no-account>
      <create-account>Create an Authorship.me account</create-account>
     <footer-start-text>© Copyright </footer-start-text>
-    <authorship-name>Authorship.me</authorship-name> 
+    <authorship-name>Authorship.me</authorship-name>
     <footer-end-text>All rights reserved.</footer-end-text>
     <footer-end-text>Todos os direitos reservados.</footer-end-text>
   </en>
@@ -21,10 +21,10 @@
     <no-account>haben Sie noch nicht ein Konto?</no-account>
      <create-account>Schreiben Sie in Authorship.me ein</create-account>
     <footer-start-text>© Copyright </footer-start-text>
-    <authorship-name>Authorship.me</authorship-name> 
+    <authorship-name>Authorship.me</authorship-name>
     <footer-end-text>Alle Rechte vorbehalten.</footer-end-text>
   </de>
-  
+
   <pt>
     <title> Use sua conta do Authorship.me</title>
     <emailLabel>Email:</emailLabel>
@@ -33,6 +33,6 @@
     <no-account>Ainda não tem uma conta?</no-account>
      <create-account>Crie uma conta Authorship.me</create-account>
     <footer-start-text>© Copyright </footer-start-text>
-    <authorship-name>Authorship.me</authorship-name> 
+    <authorship-name>Authorship.me</authorship-name>
     <footer-end-text>Todos os direitos reservados.</footer-end-text>
   </pt>
