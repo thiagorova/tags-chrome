@@ -2,7 +2,7 @@
   "name": "Tags by Authorship",
   "short_name": "Tags",  
   "description": "We collect metadata from your text, giving you its tags.",
-  "version": "1.6",
+  "version": "1.8",
   "manifest_version": 2,
   "author": "Authorship: Thiago Rodrigues and Luis Bajaña",
   "offline_enabled": false,

@@ -43,7 +43,21 @@
         xhttp.send(JSON.stringify( data ));
     };
 
+  var goToAuthorship = function(e) {
+    e.preventDefault();
+    chrome.tabs.create({ url: "http://www.authorship.me"});
+    return false;
+  }
+
+  var createAccount = function(e) {
+    e.preventDefault();
+    chrome.tabs.create({ url: "http://metrics.authorship.me/users/sign_up"});
+    return false;
+  }
+
 window.onload=function(){
     document.getElementById("login").addEventListener('click', login);
     document.getElementById("password").addEventListener('keypress', login);
+    document.getElementById("authorship-name").addEventListener('click', goToAuthorship); 
+  document.getElementById("authorshipCreateAccount").addEventListener('click', createAccount);
 }
