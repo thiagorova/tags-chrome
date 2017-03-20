@@ -90,12 +90,16 @@ main {
     color: #D8454A;
     font-size: 16px;
 }
+
 .sharing {
     display: table;
     width: 80%;
     position:fixed;
-    bottom: 25px;
-    
+    bottom: 35px;
+    z-index: 10;    
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 25%;
 }
 .sharing-el {
     display: table-cell;
@@ -104,6 +108,21 @@ main {
 
 .sharing-el i {
     font-size: 30px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding-left: 30%;
+  width: 100%;
+  padding-top: 20px;
+  z-index: 10;
+  background-color: white;
+}
+
+.languages a {
+  color: #4bcfd5;
+  cursor: pointer;
 }
 
 #number-of-tags {

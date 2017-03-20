@@ -102,3 +102,7 @@ footer a{
   color:white;
 }
 
+.languages a {
+  color: #4bcfd5;
+  cursor: pointer;
+}
